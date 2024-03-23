@@ -9,3 +9,4 @@ requests==2.22.0
 SQLAlchemy==1.4.32
 urllib3==1.25.8
 Werkzeug==2.3.0
+python-dotenv==1.0.1
