@@ -1,4 +1,4 @@
-const host5 = 'http://localhost:5000';
+const host5 = 'https://e0-homes-api.onrender.com';
 
 // Get the modal
 let modalsignup = document.getElementById("sign-up");

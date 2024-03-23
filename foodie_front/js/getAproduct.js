@@ -1,4 +1,4 @@
-const host2 = 'http://localhost:5000';
+const host2 = 'https://e0-homes-api.onrender.com';
 let cartCount = 0;
 
 async function add_to_cart (productId) {

@@ -1,4 +1,4 @@
-const host1 = 'http://localhost:5000';
+const host1 = 'https://e0-homes-api.onrender.com';
 
 // Get the modal
 var modal = document.getElementById("myModal");

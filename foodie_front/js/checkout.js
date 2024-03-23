@@ -1,4 +1,4 @@
-const host4 = 'http://localhost:5000';
+const host4 = 'https://e0-homes-api.onrender.com';
 
 async function test() {
     try {
