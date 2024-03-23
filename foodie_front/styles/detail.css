@@ -1,0 +1,190 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#description {
+  background-color: #EEEDEB;
+  background-color: white;
+}
+
+.bgnav {background-color: #efecec}
+
+.container {
+  margin-top: 30px;
+}
+
+#description {
+ margin: 30px;
+ text-align: left;
+ line-height: 2;
+}
+
+.desc-img:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+}
+
+.desc-img {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: 10px; 
+  right: 80px;
+  border-radius: 20px;
+  border: 0;
+}
+
+
+.desc-ttext {
+  margin-top: 40px;
+  margin-left: 5px;
+  font-weight: bolder;
+}
+
+#desc-tt {
+  background-color: #efecec;
+  border-radius: 20px;
+}
+
+.desc {
+  border: 0;
+  padding: 10px;
+  text-align: left;
+  line-height: 2;
+  padding: 10px;
+}
+
+.cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+}
+
+.cta {
+  margin: 20px;
+  border: 0;
+  border-radius: 10px;
+  width: 150px;
+  font-weight: bolder;
+  color: white;
+}
+
+.buy {
+  background-color: black;
+  color: green;
+}
+.cart {
+  background-color: blue;
+  color: black;
+}
+ 
+
+.spec-title {
+  margin-top: 30px;
+  margin-left: 30px;
+  font-weight: bolder;
+}
+
+.desc-list {
+  font-weight: bold;
+}
+
+
+.btn-list {
+  background-color: #DBE7C9;
+  background-color: #efecec;
+}
+
+
+.navbar{
+  position:fixed;
+  width:90%;
+  z-index: 1000000;
+  top:0;
+  margin-bottom: 20px;
+}
+
+
+
+@media (max-width: 950px) {
+  /* .row {
+    flex-direction: column-reverse;
+  } */
+
+  .margin {
+    margin: 10px;
+    margin-top: 100px;
+  }
+  .col-25 {
+    display: none;
+  }
+  #w3-form {
+    margin: 10px;
+    margin-top: 100px;
+  }
+  .containerform {
+    width: 100%;
+  }
+  .billing-address {
+    display: none;
+  }
+  #title {
+    height: 505px;
+    margin-bottom: 10px;
+  }
+  .navbar {
+      width: 79%;
+  }
+  .fixed-nav {
+    width: 90%;
+  }
+  .cta {
+    max-width: 50%;
+    font-size: 0.7rem;
+    padding: 10px;
+  }
+
+  .top {
+    padding-left: 15px;
+  }
+
+  .title-txt {
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+  .shop-border {
+    height: 300px;
+  }
+  .shop-img {
+    height: 70%;
+  }
+  #shop {
+    padding-bottom: 50px;
+  }
+  #shop .container .row {
+    width: 100%;
+  }
+  .modal-content {
+    width: 80%;
+  }
+  .market-border {
+    width: 90%;
+  }
+  #carousel {
+    padding-bottom: 50px;
+  }
+  .btnflex {
+    display: flex;
+  }
+}
+
+@media (min-width: 850px) and (max-width: 1220px) {
+  footer {
+    padding: 40%;
+    text-align: center;
+    line-height: 2;
+    color: grey;
+    background-color: #efecec;
+}
+}
+

@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang='en'>
+	<head>
+	   <meta charset="UTF-8"> 
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	   <link rel="stylesheet" href="styles/detail.css">
+	   <link rel="stylesheet" href="styles/home.css">
+	   <link rel="stylesheet" href="styles/checkout.css">
+	   <title>E0-homes | Checkout</title>
+	   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	   <script src="https://kit.fontawesome.com/0f439c9d26.js" crossorigin="anonymous"></script>
+	   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	</head>
+    <body>
+
+        <section id="description">
+            <nav class="navbar navbar-expand-lg navbar-light bgnav">
+				<div class="container-fluid">
+				<a class="navbar-brand" id="brand" href="index.html#title">E0-homes</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+					<div class="navbar-nav ms-auto">
+					<a class="nav-link" href="index.html#title">Home</a>
+					<a class="nav-link"  aria-current="page" href="shop.html#market">Shop</a>
+					<a class="nav-link" href="javascript:void(0)" id="myBtn">Cart <i class="fa-solid fa-cart-shopping"><span id="cart-info"></span></i></a>
+					<a class="nav-link active" href="checkout.html">Checkout</a>
+					<div class="logout">
+                      
+                    </div>
+					</div>
+				</div>
+				</div>
+			</nav>
+        </section>
+
+
+		
+		<section id="mycart">
+			<div id="myModal" class="modal">
+	
+				<!-- Modal content -->
+				<div class="modal-content">
+				  <span class="close">&times;</span>
+				  <div class="cart-data">
+					
+				  </div>
+				  <a href="checkout.html"><button class="shop-now">checkout</button></a>
+				</div>
+			  
+			  </div>
+		</section>
+
+
+		
+		<section id="w3-form">
+			<div class="row">
+				<div class="col-75">
+				  <div class="containerform">
+					<form action="" method="post">
+			  
+					  <div class="row">
+						<div class="col-50 billing-address">
+						  <h3>Billing Address</h3>
+						  <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+						  <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+						  <label for="email"><i class="fa fa-envelope"></i> Email</label>
+						  <input type="text" id="email" name="email" placeholder="john@example.com">
+						  <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+						  <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+						  <label for="city"><i class="fa fa-institution"></i> City</label>
+						  <input type="text" id="city" name="city" placeholder="New York">
+			  
+						  <div class="row">
+							<div class="col-50">
+							  <label for="state">State</label>
+							  <input type="text" id="state" name="state" placeholder="NY">
+							</div>
+							<div class="col-50">
+							  <label for="zip">Zip</label>
+							  <input type="text" id="zip" name="zip" placeholder="10001">
+							</div>
+						  </div>
+						</div>
+			  
+						<div class="col-50">
+						  <h3>Payment</h3>
+						  <label for="fname">Accepted Cards</label>
+						  <div class="icon-container">
+							<i class="fa fa-cc-visa" style="color:navy;"></i>
+							<i class="fa fa-cc-amex" style="color:blue;"></i>
+							<i class="fa fa-cc-mastercard" style="color:red;"></i>
+							<i class="fa fa-cc-discover" style="color:orange;"></i>
+						  </div>
+						  <label for="cname">Name on Card</label>
+						  <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+						  <label for="ccnum">Credit card number</label>
+						  <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+						  <label for="expmonth">Exp Month</label>
+						  <input type="text" id="expmonth" name="expmonth" placeholder="September">
+			  
+						  <div class="row">
+							<div class="col-50">
+							  <label for="expyear">Exp Year</label>
+							  <input type="text" id="expyear" name="expyear" placeholder="2018">
+							</div>
+							<div class="col-50">
+							  <label for="cvv">CVV</label>
+							  <input type="text" id="cvv" name="cvv" placeholder="352">
+							</div>
+						  </div>
+						</div>
+			  
+					  </div>
+					  <label class="billing-address">
+						<input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+					  </label>
+					  <input type="submit" value="Continue to checkout" class="btn">
+					</form>
+				  </div>
+				</div>
+			  
+				<div class="col-25">
+				  <div class="containerform">
+					<h4>Cart
+					  <span class="price" style="color:black">
+						<i class="fa fa-shopping-cart"></i>
+						<b class="cart-n"></b>
+					  </span>
+					</h4>
+					<div class="all-cart">
+						
+					</div>
+					<hr>
+					<p>Total <span class="price"><b class="real"></b></span></p>
+				  </div>
+				</div>
+			  </div>
+		</section>	
+		
+	
+
+
+
+
+
+
+
+
+
+    <section id="footer">
+		<footer>
+			<div class="footer">
+				<h3 class="footer-text">copyright</h3>
+				<h3 class="footer-text">E0-homes enterprise</h3>
+				<h4 class="footer-text">contact logos</h4>
+			 </div>
+		</footer>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script src="js/auth.js"></script>
+	<script src="js/getAproduct.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/checkout.js"></script>
+</body>
+</html>

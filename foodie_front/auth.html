@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>E0-homes | auth</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/auth.css">
+    <script src="https://kit.fontawesome.com/0f439c9d26.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="intro">
+        <h2>Welcome to E0-homes</h2>
+    </div>
+    <section id="auth">
+        <div class="auth-flex">
+            <div class="auth-btn"><a href="javascript:void(0)" id="myBtnsignup"><button class="btn">Sign Up</button></a></div>
+            <div class="auth-btn"><a href="javascript:void(0)" id="myBtnlogin"><button class="btn">Login</button></a></div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <div id="sign-up" class="modal">
+        <div class="modal-content">
+            <form method="post" id="signUp-form">
+                <span class="closeSignup">&times;</span>
+                <h2>Sign Up</h2>
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Email" name="email" required>
+                </div>
+                <div class="form-field">
+                    <label for="fname">First name</label>
+                    <input type="text" id="fname" placeholder="first name" name="first_name" required>
+                </div>
+                <div class="form-field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="password" name="password1" required>
+                </div>
+                <div class="form-field">
+                    <label for="password">Confirm password</label>
+                    <input type="password" id="password" placeholder="confirm password" name="password2" required>
+                </div>
+                <button type="submit" onclick="" class="submit-btn">Submit</button>
+                <div class="error">
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="login" class="modal">
+        <div class="modal-content">
+            <form method="post" id="login-form">
+                <span class="closeLogin">&times;</span>
+                <h2>Login</h2>
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Email" name="email" required>
+                </div>
+                <div class="form-field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="password" name="password" required>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+                <div class="loginerror">
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

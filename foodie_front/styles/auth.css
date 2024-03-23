@@ -1,0 +1,165 @@
+body {
+    background-color: #C7C8CC; 
+}
+
+h2 {
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    width: 30%;
+    margin: auto;
+    font-size: bolder;
+}
+
+.loginerror {
+    color: red;
+    width: 30%;
+    margin: auto;
+    font-size: bolder;
+}
+
+
+.auth-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    /* background: linear-gradient(gold, brown, orangered); */
+    background-color: black;
+    color: whitesmoke;
+    padding: 20px;
+    width: 150px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+#auth {
+    width: 50%;
+    background-color: #C7C8CC;
+    margin: auto;
+    position: relative;
+    top: 150px;
+    border-radius: 20px;
+    padding: 100px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1);
+}
+
+#auth:hover {
+    transform: scale(1.02);
+}
+
+
+.intro {
+    width: 40%;
+    margin: auto;
+    position: relative;
+    top: 140px   
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #EFECEC;
+    margin: 10% auto; 
+    padding: 50px;
+    border: 0px solid #888;
+    border-radius: 20px;
+    width: 30%; 
+  }
+  
+  .closeSignup {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .closeSignup:hover,
+  .closeSignup:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .closeLogin {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .closeLogin:hover,
+  .closeLogin:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+.form-field {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.submit-btn {
+    border-radius: 10px;
+    padding: 10px;
+    width: 100px;
+    background-color: black;
+    color: whitesmoke;
+    font-weight: bold;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.submit-btn:hover {
+    transform: scale(1.04);
+}
+
+@media only screen and (max-width: 1200px) {
+    .auth-flex {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .intro {
+        top: 40px;
+    }
+    .intro h2 {
+        font-size: 1.2rem;
+    }
+    #auth {
+        top: 50px;
+    }
+    .auth-btn {
+        position: relative;
+        right: 70px;
+    }
+
+    .modal-content {
+        width: 90%;
+        padding: 30px;
+    }
+    .form-field {
+        flex-direction: column;
+    }
+}
