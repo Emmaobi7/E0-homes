@@ -1,4 +1,22 @@
 const host1 = 'https://e0-homes-api.onrender.com';
+//const host1 = 'http://localhost:5000';
+
+if (localStorage.getItem('userId')) {
+  console.log('first')
+  document.querySelector('.logout').innerHTML = `
+  <button class="nav-link out" onclick="logout()" href="checkout.html">Logout</button>
+  `
+  document.getElementById('checkout-show').innerHTML = 'Checkout';
+  
+  document.getElementById('cart-show').innerHTML = `
+  <a class="nav-link" href="javascript:void(0)" id="myBtn">Cart <i class="fa-solid fa-cart-shopping"><span id="cart-info"></span></i></a>
+  `
+} else {
+  console.log('no user found')
+  document.querySelector('.logout').innerHTML = `
+  <button class="nav-link out" onclick="toAuth()" href="checkout.html">Sign up</button>
+  `
+}
 
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -10,9 +28,13 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
+if (localStorage.getItem('userId')) {
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
 }
+
+
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -59,13 +81,8 @@ function toAuth() {
   window.location.replace('./auth.html')
 }
 
-if (localStorage.getItem('userId')) {
-  document.querySelector('.logout').innerHTML = `
-  <button class="nav-link out" onclick="logout()" href="checkout.html">Logout</button>
-  `
-} else {
-  document.querySelector('.logout').innerHTML = `
-  <button class="nav-link out" onclick="toAuth()" href="checkout.html">Sign up</button>
-  `
-}
+
+
+let date = new Date().getFullYear();
+document.querySelector('.d').innerHTML = `copyright @${date}`
 

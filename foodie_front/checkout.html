@@ -25,8 +25,10 @@
 					<div class="navbar-nav ms-auto">
 					<a class="nav-link" href="index.html#title">Home</a>
 					<a class="nav-link"  aria-current="page" href="shop.html#market">Shop</a>
-					<a class="nav-link" href="javascript:void(0)" id="myBtn">Cart <i class="fa-solid fa-cart-shopping"><span id="cart-info"></span></i></a>
-					<a class="nav-link active" href="checkout.html">Checkout</a>
+					<div id="cart-show">
+						
+					</div>
+					<a class="nav-link active" href="checkout.html"><span id="checkout-show"></span></a>
 					<div class="logout">
                       
                     </div>
@@ -54,20 +56,26 @@
 		</section>
 
 
-		
+		<section id="mobile-total">
+			<div>
+				Total: <span class="real"></span>
+			</div>
+		</section>
+
+
 		<section id="w3-form">
 			<div class="row">
 				<div class="col-75">
 				  <div class="containerform">
-					<form action="" method="post">
+					<form method="post" id="checkout-form">
 			  
 					  <div class="row">
 						<div class="col-50 billing-address">
 						  <h3>Billing Address</h3>
+						  <h6>All of this column is optional</h5>
 						  <label for="fname"><i class="fa fa-user"></i> Full Name</label>
 						  <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
-						  <label for="email"><i class="fa fa-envelope"></i> Email</label>
-						  <input type="text" id="email" name="email" placeholder="john@example.com">
+						  
 						  <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
 						  <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
 						  <label for="city"><i class="fa fa-institution"></i> City</label>
@@ -88,27 +96,28 @@
 						<div class="col-50">
 						  <h3>Payment</h3>
 						  <label for="fname">Accepted Cards</label>
+						  <h6>All of this column is mandatory</h5>
 						  <div class="icon-container">
 							<i class="fa fa-cc-visa" style="color:navy;"></i>
 							<i class="fa fa-cc-amex" style="color:blue;"></i>
 							<i class="fa fa-cc-mastercard" style="color:red;"></i>
 							<i class="fa fa-cc-discover" style="color:orange;"></i>
 						  </div>
-						  <label for="cname">Name on Card</label>
-						  <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+						  <label for="email"><i class="fa fa-envelope"></i> Email</label>
+						  <input type="text" id="email" name="email" placeholder="john@example.com" required>
 						  <label for="ccnum">Credit card number</label>
-						  <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+						  <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" required>
 						  <label for="expmonth">Exp Month</label>
-						  <input type="text" id="expmonth" name="expmonth" placeholder="September">
+						  <input type="text" id="expmonth" name="expmonth" placeholder="September" required>
 			  
 						  <div class="row">
 							<div class="col-50">
 							  <label for="expyear">Exp Year</label>
-							  <input type="text" id="expyear" name="expyear" placeholder="2018">
+							  <input type="text" id="expyear" name="expyear" placeholder="2018" required>
 							</div>
 							<div class="col-50">
 							  <label for="cvv">CVV</label>
-							  <input type="text" id="cvv" name="cvv" placeholder="352">
+							  <input type="text" id="cvv" name="cvv" placeholder="352" required>
 							</div>
 						  </div>
 						</div>
@@ -117,7 +126,7 @@
 					  <label class="billing-address">
 						<input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
 					  </label>
-					  <input type="submit" value="Continue to checkout" class="btn">
+					  <input id="checkout-btn" type="submit" value="Continue to checkout" class="btn">
 					</form>
 				  </div>
 				</div>
@@ -153,8 +162,9 @@
     <section id="footer">
 		<footer>
 			<div class="footer">
-				<h3 class="footer-text">copyright</h3>
-				<h3 class="footer-text">E0-homes enterprise</h3>
+				<h3 class="footer-text d"></h3>
+	    <h3 class="footer-text">E0 enterprise</h3>
+	    <h4 class="footer-text">Developer contact: emma46574@gmail.com</h4></h3>
 				<h4 class="footer-text">contact logos</h4>
 			 </div>
 		</footer>

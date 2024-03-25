@@ -31,6 +31,37 @@ def deleteone_cart(product_id):
         return jsonify({"error": str(e)})
 
 
+@cart_api.route('/delete-all_cart/<int:id>', methods=['GET'], strict_slashes=False)
+def deleteall_cart(id):
+    from app import Session
+    try:
+        session = Session()
+        cart = session.query(Cart).filter_by(id=id).first()
+        if cart:
+            session.delete(cart)
+            session.commit()
+            return jsonify({'success': 'cart deleted successfully'})
+        else:
+            return jsonify({'error': 'problems deleting cart'})
+    except Exception as e:
+        return jsonify({'error': str(e)})
+
+@cart_api.route('/get_cart_id/<int:user_id>', methods=['GET'], strict_slashes=False)
+def get_cart_id(user_id):
+    from app import Session
+    try: 
+        session = Session()
+        product = session.query(Cart).filter_by(user_id=user_id).first()
+        if product:
+            return jsonify(product.id)
+        else:
+            return jsonify({'error': 'nothing in cart'})
+    except Exception as e:
+        print(e)
+        return jsonify({'error': str(e)}) 
+
+
+
 @cart_api.route('/get-cart/<int:user_id>', methods=['GET'], strict_slashes=False)
 def get_cart(user_id):
     from app import Session
