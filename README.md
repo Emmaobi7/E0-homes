@@ -1,6 +1,9 @@
 # E0-homes
 * E0-homes is a convenient and user friendly **product** purchase and delivery app that brings the your favourite products ranging from clothes, home appliances, furnitures and lots more to your doorstep. Need to refurnish your home or change your wardrope **goodie** got you covered.
 
+
+## This project is live at  https://E0-homes.onrender.com
+
 # TABLE OF CONTENTS
 <ol>
   <li>Getting started </li>
