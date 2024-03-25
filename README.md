@@ -1,5 +1,8 @@
-# GOODIE FETCH
-* goodie-fetch is a convenient and user friendly **product** purchase and delivery app that brings the your favourite products ranging from clothes, home appliances, furnitures and lots more to your doorstep. Need to refurnish your home or change your wardrope **goodie** got you covered.
+# E0-homes
+* E0-homes is a convenient and user friendly **product** purchase and delivery app that brings the your favourite products ranging from clothes, home appliances, furnitures and lots more to your doorstep. Need to refurnish your home or change your wardrope **goodie** got you covered.
+
+
+## This project is live at  https://E0-homes.onrender.com
 
 # TABLE OF CONTENTS
 <ol>
@@ -17,7 +20,7 @@
 * This project was built on ubuntu 20, so once you've got your ubuntu 20 clone this repo and get started
 
 ## Prerequisites
-* This libraries are required to run this project python 3.6xx and flask and sqlalchemy and react js with other libraries which would be authomatically installed in the **installation section**
+* This libraries are required to run this project python 3.6xx and flask and sqlalchemy and html css and vanilla javascript with other libraries which would be authomatically installed in the **installation section**
 
 ## Installation
 * simply execute the below command to get all the build libraries in your setup
@@ -27,10 +30,10 @@
 <code>python3 main.py</code>
 
 * you can use environment variables(remember to edit the 'app/__init__.py' for your prefrred database info)  for the database or just simply:
-<code>./set_mysql.sql</code>
+<code>cat set_mysql.sql | sudo mysql</code>
 
 #Usage
-* This project uses a react js frontend and a python backend api with these endpoints:
+* This project uses vanilla javascritp frontend and a python backend api with these endpoints:
 ## API
   ### POST requests
 * 'app/auth/sign_up': for registering users to the database

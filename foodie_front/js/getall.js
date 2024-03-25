@@ -1,4 +1,5 @@
-const host3 = 'http://localhost:5000';
+const host3 = 'https://e0-homes-api.onrender.com';
+//const host3 = 'http://localhost:5000';
 
 async function marketData () {
     try {

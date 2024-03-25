@@ -1,4 +1,5 @@
-const host5 = 'http://localhost:5000';
+const host5 = 'https://e0-homes-api.onrender.com';
+//const host5 = 'http://localhost:5000';
 
 // Get the modal
 let modalsignup = document.getElementById("sign-up");
@@ -104,7 +105,8 @@ loginForm.addEventListener('submit', handleLoginForm)
 
 async function logout() {
   try {
-    const response = await axios.post(`${host5}auth/logout`)
+    console.log('logout yo')
+    const response = await axios.post(`${host5}/auth/logout`)
     localStorage.removeItem('userId')
     window.location.replace("./auth.html");
   } catch(err) {

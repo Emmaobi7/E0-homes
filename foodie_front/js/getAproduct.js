@@ -1,4 +1,5 @@
-const host2 = 'http://localhost:5000';
+const host2 = 'https://e0-homes-api.onrender.com';
+//const host2 = 'http://localhost:5000';
 let cartCount = 0;
 
 async function add_to_cart (productId) {
@@ -46,10 +47,12 @@ async function updateCart(id) {
 async function loadCartData() {
     try {
   
-      const response = await axios.get(`${host2}/api/v1/get-cart/${localStorage.getItem('userId')}`)
-      const data = response.data;
-      const lastElements = data.map(array => array[array.length - 1]);
-      lastElements.map( async (id) => {
+      if (localStorage.getItem('userId')) {
+        const response = await axios.get(`${host2}/api/v1/get-cart/${localStorage.getItem('userId')}`)
+      
+        const data = response.data;
+        const lastElements = data.map(array => array[array.length - 1]);
+        lastElements.map( async (id) => {
         cartCount = cartCount +1;
         document.querySelector('#cart-info').innerHTML = cartCount;
         const response_data = await axios.get(`${host2}/api/v1/products/${id}`);
@@ -81,7 +84,7 @@ async function loadCartData() {
                 });
       });
     });
-     
+    }
     } catch(err) {
       console.log(err)
     }

@@ -4,8 +4,71 @@ By id and seach functinality
 """
 from flask import Blueprint, jsonify, request
 from app.models import Product
+import requests
+import json
+from dotenv import load_dotenv
+import os
+
+
 
 products = Blueprint('products', __name__)
+
+@products.route('/verify_payment', methods=['POST'], strict_slashes=False)
+def verify_payment():
+    data = request.get_json()
+    reference = data.get('reference')
+
+
+    endpoint = 'https://api.paystack.co/transaction/verify/' + reference
+
+    load_dotenv()
+    paystack_sk = os.getenv("PAYSTACK_SECRET_KEY")
+    headers = {
+        'Authorization': 'Bearer ' + paystack_sk
+    }
+    try:
+
+        response = requests.get(endpoint, headers=headers)
+        if response.status_code == 200:
+            
+            return jsonify({'data': response.json()})
+        else:
+            
+             return jsonify({'error': 'Internal server error'})
+    except Exception as e:
+        return jsonify({'error': str(e)})
+
+
+
+@products.route('/payment', methods=['POST'], strict_slashes=False)
+def initilize_payment():
+    """
+    initialize_payment: make payment 
+    implemented using paystack transavtion api
+    return: paystack api response
+    """
+    data = request.get_json()
+    email = data.get('email')
+    amount = data.get('amount')
+    url = 'https://api.paystack.co/transaction/initialize'
+    load_dotenv()
+    paystack_sk = os.getenv("PAYSTACK_SECRET_KEY")
+    headers = {
+        'Authorization': 'Bearer ' + paystack_sk,
+        'Content-Type': 'application/json'
+    }
+    payload = {
+        'email': email,
+        'amount': amount * 100
+    }
+    try:
+        response = requests.post(url, headers=headers, data=json.dumps(payload))
+        return jsonify({'data': response.json()})
+    except Exception as e:
+        return jsonify(str(e))
+
+
+
 
 @products.route('/products', methods=['GET'], strict_slashes=False)
 def get_product_all():
